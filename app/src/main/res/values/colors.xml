@@ -1,9 +1,9 @@
 <!-- 색상 리소스 -->
 <resources>
 	<!-- 앱 색상 -->
-	<color name = "colorPrimary">#008577</color>
-	<color name = "colorPrimaryDark">#00574B</color>
-	<color name = "colorAccent">#D81B60</color>
+	<color name = "colorPrimary">#00BFA5</color>
+	<color name = "colorPrimaryDark">#008E76</color>
+	<color name = "colorAccent">#00D2B7</color>
 
 	<!-- 머티리얼 색상 -->
 	<color name = "grey_50">#FAFAFA</color>
