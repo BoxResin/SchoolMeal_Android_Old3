@@ -1,0 +1,5 @@
+<!-- 메인 액티비티 레이아웃 -->
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"/>
