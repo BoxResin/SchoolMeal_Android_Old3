@@ -18,5 +18,21 @@
 			android:id = "@+id/toolbar"
 			android:layout_width = "match_parent"
 			android:layout_height = "?attr/actionBarSize"/>
+
+		<!-- 날짜 선택 뷰 -->
+		<com.github.sundeepk.compactcalendarview.CompactCalendarView
+			android:id = "@+id/date_picker"
+			android:layout_width = "match_parent"
+			android:layout_height = "220dp"
+			android:paddingTop = "10dp"
+			app:compactCalendarBackgroundColor = "@color/colorPrimary"
+			app:compactCalendarCurrentDayBackgroundColor = "@color/colorPrimary"
+			app:compactCalendarCurrentDayTextColor = "@color/grey_800"
+			app:compactCalendarCurrentSelectedDayBackgroundColor = "#FFFFFF"
+			app:compactCalendarCurrentSelectedDayTextColor = "@color/colorPrimary"
+			app:compactCalendarMultiEventIndicatorColor = "@color/colorAccent"
+			app:compactCalendarShouldSelectFirstDayOfMonthOnScroll = "false"
+			app:compactCalendarTextColor = "#FFFFFF"
+			app:compactCalendarTextSize = "12sp"/>
 	</com.google.android.material.appbar.AppBarLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
