@@ -2,4 +2,7 @@
 <resources>
 	<!-- 앱 이름 -->
 	<string name = "app_name">급식</string>
+
+	<!-- 메뉴 제목 -->
+	<string name = "action_search_school">학교 검색</string>
 </resources>
