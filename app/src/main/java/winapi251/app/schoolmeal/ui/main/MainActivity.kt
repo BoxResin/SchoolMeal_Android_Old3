@@ -3,7 +3,9 @@ package winapi251.app.schoolmeal.ui.main
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.TooltipCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.card_meal.*
 import winapi251.app.schoolmeal.R
 
 /** 메인 액티비티 */
@@ -17,6 +19,13 @@ class MainActivity : AppCompatActivity()
 
 		// 툴바 초기화
 		setSupportActionBar(toolbar)
+
+		// 툴팁 달기
+		TooltipCompat.setTooltipText(btn_show_meal, getString(R.string.action_show_meal))
+		TooltipCompat.setTooltipText(btn_show_nutrient_info, getString(R.string.action_show_nutrient_info))
+		TooltipCompat.setTooltipText(btn_show_origin_info, getString(R.string.action_show_origin_info))
+		TooltipCompat.setTooltipText(btn_copy_text, getString(R.string.action_copy_text))
+		TooltipCompat.setTooltipText(btn_refresh_meal, getString(R.string.action_refresh_meal))
 
 		// TODO 임시 코드
 		title = "선린인터넷고등학교"

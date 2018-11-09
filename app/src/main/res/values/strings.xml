@@ -5,4 +5,14 @@
 
 	<!-- 메뉴 제목 -->
 	<string name = "action_search_school">학교 검색</string>
+	<string name = "action_show_meal">식단 보기</string>
+	<string name = "action_show_nutrient_info">영양 정보 보기</string>
+	<string name = "action_show_origin_info">원산지 정보 보기</string>
+	<string name = "action_copy_text">텍스트 복사</string>
+	<string name = "action_refresh_meal">식단표 새로고침</string>
+
+	<!-- 탭 이름 -->
+	<string name = "tab_breakfast">아침</string>
+	<string name = "tab_lunch">점심</string>
+	<string name = "tab_dinner">저녁</string>
 </resources>

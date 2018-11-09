@@ -1,0 +1,161 @@
+<!-- 식단 카드 레이아웃 -->
+<androidx.cardview.widget.CardView
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	app:cardBackgroundColor = "@color/grey_200"
+	tools:layout_margin = "20dp">
+
+	<!-- 본문 -->
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width = "match_parent"
+		android:layout_height = "match_parent">
+
+		<!-- 날짜 텍스트 -->
+		<TextView
+			android:id = "@+id/txt_date"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			android:background = "@color/grey_400"
+			android:gravity = "center"
+			android:maxLines = "1"
+			android:textColor = "#FFFFFF"
+			android:textSize = "20sp"
+			app:layout_constraintLeft_toLeftOf = "parent"
+			app:layout_constraintRight_toRightOf = "parent"
+			app:layout_constraintTop_toTopOf = "parent"
+			tools:text = "오늘 (금)"/>
+
+		<!-- 시간 탭 -->
+		<com.google.android.material.tabs.TabLayout
+			android:id = "@+id/time_tab"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			app:layout_constraintLeft_toLeftOf = "parent"
+			app:layout_constraintRight_toRightOf = "parent"
+			app:layout_constraintTop_toBottomOf = "@id/txt_date"
+			app:tabBackground = "@color/grey_300"
+			app:tabGravity = "fill"
+			app:tabSelectedTextColor = "@color/colorAccent"
+			app:tabTextColor = "@color/grey_800">
+
+			<!-- 아침 탭 -->
+			<com.google.android.material.tabs.TabItem
+				android:id = "@+id/tab_breakfast"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:text = "@string/tab_breakfast"/>
+
+			<!-- 점심 탭 -->
+			<com.google.android.material.tabs.TabItem
+				android:id = "@+id/tab_lunch"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:text = "@string/tab_lunch"/>
+
+			<!-- 저녁 탭 -->
+			<com.google.android.material.tabs.TabItem
+				android:id = "@+id/tab_dinner"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:text = "@string/tab_dinner"/>
+		</com.google.android.material.tabs.TabLayout>
+
+		<!-- 바닥 메뉴 바 -->
+		<View
+			android:id = "@+id/bottom_menu_bar"
+			android:layout_width = "0dp"
+			android:layout_height = "40dp"
+			android:background = "@color/grey_300"
+			app:layout_constraintBottom_toBottomOf = "parent"
+			app:layout_constraintLeft_toLeftOf = "parent"
+			app:layout_constraintRight_toRightOf = "parent"/>
+
+		<!-- 식단 보기 -->
+		<ImageView
+			android:id = "@+id/btn_show_meal"
+			android:layout_width = "40dp"
+			android:layout_height = "0dp"
+			android:background = "@color/grey_200"
+			android:clickable = "true"
+			android:contentDescription = "@string/action_show_meal"
+			android:focusable = "true"
+			android:foreground = "?attr/selectableItemBackground"
+			android:padding = "8dp"
+			android:tint = "@color/grey_800"
+			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
+			app:layout_constraintLeft_toLeftOf = "@id/bottom_menu_bar"
+			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
+			app:srcCompat = "@drawable/ic_local_dining_black_24dp"
+			app:tooltipText = "@string/action_show_meal"
+			tools:ignore = "UnusedAttribute"/>
+
+		<!-- 영양 정보 보기 -->
+		<ImageView
+			android:id = "@+id/btn_show_nutrient_info"
+			android:layout_width = "40dp"
+			android:layout_height = "0dp"
+			android:background = "?attr/selectableItemBackground"
+			android:clickable = "true"
+			android:contentDescription = "@string/action_show_nutrient_info"
+			android:focusable = "true"
+			android:padding = "8dp"
+			android:tint = "@color/grey_800"
+			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
+			app:layout_constraintLeft_toRightOf = "@id/btn_show_meal"
+			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
+			app:srcCompat = "@drawable/ic_pie_chart_black_24dp"
+			app:tooltipText = "@string/action_show_meal"/>
+
+		<!-- 원산지 정보 보기 -->
+		<ImageView
+			android:id = "@+id/btn_show_origin_info"
+			android:layout_width = "40dp"
+			android:layout_height = "0dp"
+			android:background = "?attr/selectableItemBackground"
+			android:clickable = "true"
+			android:contentDescription = "@string/action_show_origin_info"
+			android:focusable = "true"
+			android:padding = "8dp"
+			android:tint = "@color/grey_800"
+			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
+			app:layout_constraintLeft_toRightOf = "@id/btn_show_nutrient_info"
+			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
+			app:srcCompat = "@drawable/ic_public_black_24dp"
+			app:tooltipText = "@string/action_show_meal"/>
+
+		<!-- 식단표 새로고침 메뉴 -->
+		<ImageView
+			android:id = "@+id/btn_refresh_meal"
+			android:layout_width = "40dp"
+			android:layout_height = "0dp"
+			android:background = "?attr/selectableItemBackground"
+			android:clickable = "true"
+			android:contentDescription = "@string/action_refresh_meal"
+			android:focusable = "true"
+			android:padding = "8dp"
+			android:tint = "@color/grey_800"
+			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
+			app:layout_constraintRight_toRightOf = "@id/bottom_menu_bar"
+			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
+			app:srcCompat = "@drawable/ic_refresh_black_24dp"/>
+
+		<!-- 텍스트 복사 메뉴 -->
+		<ImageView
+			android:id = "@+id/btn_copy_text"
+			android:layout_width = "40dp"
+			android:layout_height = "0dp"
+			android:background = "?attr/selectableItemBackground"
+			android:clickable = "true"
+			android:contentDescription = "@string/action_copy_text"
+			android:focusable = "true"
+			android:padding = "8dp"
+			android:tint = "@color/grey_800"
+			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
+			app:layout_constraintRight_toLeftOf = "@id/btn_refresh_meal"
+			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
+			app:srcCompat = "@drawable/ic_content_copy_black_24dp"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
