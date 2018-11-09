@@ -1,6 +1,6 @@
 package winapi251.app.schoolmeal.model.school
 
-import kotlinx.coroutines.experimental.delay
+import kotlinx.coroutines.delay
 import winapi251.app.schoolmeal.model.Area
 import winapi251.app.schoolmeal.model.school.School.Code
 import winapi251.app.schoolmeal.model.school.School.Course
