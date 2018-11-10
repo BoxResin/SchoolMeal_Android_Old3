@@ -39,7 +39,7 @@
 			app:tabBackground = "@color/grey_300"
 			app:tabGravity = "fill"
 			app:tabSelectedTextColor = "@color/colorAccent"
-			app:tabTextColor = "@color/grey_800">
+			app:tabTextColor = "@color/grey_600">
 
 			<!-- 아침 탭 -->
 			<com.google.android.material.tabs.TabItem
@@ -84,7 +84,7 @@
 			android:focusable = "true"
 			android:foreground = "?attr/selectableItemBackground"
 			android:padding = "8dp"
-			android:tint = "@color/grey_800"
+			android:tint = "@color/grey_600"
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintLeft_toLeftOf = "@id/bottom_menu_bar"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
@@ -102,7 +102,7 @@
 			android:contentDescription = "@string/action_show_nutrient_info"
 			android:focusable = "true"
 			android:padding = "8dp"
-			android:tint = "@color/grey_800"
+			android:tint = "@color/grey_600"
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintLeft_toRightOf = "@id/btn_show_meal"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
@@ -119,7 +119,7 @@
 			android:contentDescription = "@string/action_show_origin_info"
 			android:focusable = "true"
 			android:padding = "8dp"
-			android:tint = "@color/grey_800"
+			android:tint = "@color/grey_600"
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintLeft_toRightOf = "@id/btn_show_nutrient_info"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
@@ -136,7 +136,7 @@
 			android:contentDescription = "@string/action_refresh_meal"
 			android:focusable = "true"
 			android:padding = "8dp"
-			android:tint = "@color/grey_800"
+			android:tint = "@color/grey_600"
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintRight_toRightOf = "@id/bottom_menu_bar"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
@@ -152,7 +152,7 @@
 			android:contentDescription = "@string/action_copy_text"
 			android:focusable = "true"
 			android:padding = "8dp"
-			android:tint = "@color/grey_800"
+			android:tint = "@color/grey_600"
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintRight_toLeftOf = "@id/btn_refresh_meal"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
