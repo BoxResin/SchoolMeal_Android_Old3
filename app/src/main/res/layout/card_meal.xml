@@ -88,7 +88,7 @@
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintLeft_toLeftOf = "@id/bottom_menu_bar"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
-			app:srcCompat = "@drawable/ic_local_dining_black_24dp"
+			app:srcCompat = "@drawable/ic_local_dining_24dp"
 			app:tooltipText = "@string/action_show_meal"
 			tools:ignore = "UnusedAttribute"/>
 
@@ -106,7 +106,7 @@
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintLeft_toRightOf = "@id/btn_show_meal"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
-			app:srcCompat = "@drawable/ic_pie_chart_black_24dp"
+			app:srcCompat = "@drawable/ic_pie_chart_24dp"
 			app:tooltipText = "@string/action_show_meal"/>
 
 		<!-- 원산지 정보 보기 -->
@@ -123,7 +123,7 @@
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintLeft_toRightOf = "@id/btn_show_nutrient_info"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
-			app:srcCompat = "@drawable/ic_public_black_24dp"
+			app:srcCompat = "@drawable/ic_public_24dp"
 			app:tooltipText = "@string/action_show_meal"/>
 
 		<!-- 식단표 새로고침 메뉴 -->
@@ -140,7 +140,7 @@
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintRight_toRightOf = "@id/bottom_menu_bar"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
-			app:srcCompat = "@drawable/ic_refresh_black_24dp"/>
+			app:srcCompat = "@drawable/ic_refresh_24dp"/>
 
 		<!-- 텍스트 복사 메뉴 -->
 		<ImageView
@@ -156,6 +156,6 @@
 			app:layout_constraintBottom_toBottomOf = "@id/bottom_menu_bar"
 			app:layout_constraintRight_toLeftOf = "@id/btn_refresh_meal"
 			app:layout_constraintTop_toTopOf = "@id/bottom_menu_bar"
-			app:srcCompat = "@drawable/ic_content_copy_black_24dp"/>
+			app:srcCompat = "@drawable/ic_content_copy_24dp"/>
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
