@@ -24,11 +24,11 @@
 		<com.github.sundeepk.compactcalendarview.CompactCalendarView
 			android:id = "@+id/date_picker"
 			android:layout_width = "match_parent"
-			android:layout_height = "220dp"
+			android:layout_height = "200dp"
 			android:paddingTop = "10dp"
 			app:compactCalendarBackgroundColor = "@color/colorPrimary"
 			app:compactCalendarCurrentDayBackgroundColor = "@color/colorPrimary"
-			app:compactCalendarCurrentDayTextColor = "@color/grey_800"
+			app:compactCalendarCurrentDayTextColor = "@color/colorPrimaryDark"
 			app:compactCalendarCurrentSelectedDayBackgroundColor = "#FFFFFF"
 			app:compactCalendarCurrentSelectedDayTextColor = "@color/colorPrimary"
 			app:compactCalendarMultiEventIndicatorColor = "@color/colorAccent"
