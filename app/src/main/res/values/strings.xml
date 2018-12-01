@@ -5,6 +5,8 @@
 
 	<!-- 메뉴 제목 -->
 	<string name = "action_search_school">학교 검색</string>
+	<string name = "action_drop_down_calendar">달력 열기</string>
+	<string name = "action_drop_up_calendar">달력 접기</string>
 	<string name = "action_show_meal">식단 보기</string>
 	<string name = "action_show_nutrient_info">영양 정보 보기</string>
 	<string name = "action_show_origin_info">원산지 정보 보기</string>

@@ -2,6 +2,8 @@ package winapi251.app.schoolmeal.ui.main
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.TooltipCompat
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
@@ -25,8 +27,7 @@ class MainActivity : AppCompatActivity()
 		setSupportActionBar(toolbar)
 
 		// 초기 날짜 텍스트 설정
-		val today = Calendar.getInstance()
-		setToolbarDateText(today[YEAR], today[MONTH] + 1)
+		setToolbarDateText(Calendar.getInstance().time)
 
 		// 날짜 선택 뷰 초기화
 		date_picker.setListener(object: CompactCalendarView.CompactCalendarViewListener {
@@ -37,14 +38,23 @@ class MainActivity : AppCompatActivity()
 			/** 달력을 옆으로 넘길 때마다 호출된다. */
 			override fun onMonthScroll(firstDayOfNewMonth: Date)
 			{
-				val calendar = Calendar.getInstance().apply { time = firstDayOfNewMonth }
-
 				// 툴바 부제목 날짜 텍스트 변경
-				setToolbarDateText(calendar[YEAR], calendar[MONTH] + 1)
+				setToolbarDateText(firstDayOfNewMonth)
 			}
 		})
 
+		// 달력 접기 버튼 클릭 리스너 설정
+		btn_drop_up_calendar.setOnClickListener {
+			// 달력을 숨기고 달력 열기 메뉴를 보여준다.
+			calendar_group.visibility = View.GONE
+			toolbar.menu.findItem(R.id.action_drop_down_calendar).isVisible = true
+
+			// 툴바 부제목을 숨긴다.
+			toolbar.subtitle = ""
+		}
+
 		// 툴팁 달기
+		TooltipCompat.setTooltipText(btn_drop_up_calendar, getString(R.string.action_drop_up_calendar))
 		TooltipCompat.setTooltipText(btn_show_meal, getString(R.string.action_show_meal))
 		TooltipCompat.setTooltipText(btn_show_nutrient_info, getString(R.string.action_show_nutrient_info))
 		TooltipCompat.setTooltipText(btn_show_origin_info, getString(R.string.action_show_origin_info))
@@ -62,9 +72,27 @@ class MainActivity : AppCompatActivity()
 		return true
 	}
 
-	/** 툴바 부제목의 날짜 텍스트를 설정한다. */
-	private fun setToolbarDateText(year: Int, month: Int)
+	/** 옵션 메뉴를 클릭할 때 호출된다. */
+	override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId)
 	{
-		toolbar.subtitle = "${year}년 ${month}월"
+		// 달력 열기
+		R.id.action_drop_down_calendar ->
+		{
+			// 달력을 보여주고 달력 열기 메뉴를 숨긴다.
+			calendar_group.visibility = View.VISIBLE
+			item.isVisible = false
+
+			// 툴바 부제목 날짜 텍스트 변경
+			setToolbarDateText(date_picker.firstDayOfCurrentMonth)
+			true
+		}
+		else -> false
+	}
+
+	/** 툴바 부제목의 날짜 텍스트를 설정한다. */
+	private fun setToolbarDateText(date: Date)
+	{
+		val calendar = Calendar.getInstance().apply { time = date }
+		toolbar.subtitle = "${calendar[YEAR]}년 ${calendar[MONTH] + 1}월"
 	}
 }
