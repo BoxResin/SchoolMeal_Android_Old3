@@ -26,9 +26,6 @@ class MainActivity : AppCompatActivity()
 		// 툴바 초기화
 		setSupportActionBar(toolbar)
 
-		// 초기 날짜 텍스트 설정
-		setToolbarDateText(Calendar.getInstance().time)
-
 		// 날짜 선택 뷰 초기화
 		date_picker.setListener(object: CompactCalendarView.CompactCalendarViewListener {
 			override fun onDayClick(dateClicked: Date)
